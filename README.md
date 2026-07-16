@@ -2,6 +2,8 @@
 
 Three small, no-key [Model Context Protocol](https://modelcontextprotocol.io/) servers that make useful public information available to people and AI agents everywhere.
 
+The repository also contains [`HakBul`](apps/hakbul): a privacy-first Turkish public-service discovery web app and companion AI skill. It translates a plain-language situation into a few official starting points without making eligibility decisions.
+
 | Server | Sector | What it does |
 | --- | --- | --- |
 | [`global-weather-mcp`](packages/global-weather-mcp) | Everyday life, travel, agriculture, logistics | Finds places and returns weather forecasts and air quality via Open-Meteo. |
