@@ -32,6 +32,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState<string[]>([]);
   const [searched, setSearched] = useState(false);
+  const [shared, setShared] = useState(false);
   const results = useMemo(() => {
     const words = normalized(`${query} ${active.join(" ")}`);
     const matched = programs.filter((program) => program.audience.some((word) => words.includes(normalized(word))));
@@ -42,6 +43,13 @@ export default function Home() {
     setActive((items) => items.includes(group) ? items.filter((item) => item !== group) : [...items, group]);
   }
 
+  async function share() {
+    const payload = { title: "HakBul", text: "Durumunu yaz, resmî kamu hizmeti başlangıç noktalarını bul.", url: window.location.href };
+    if (navigator.share) await navigator.share(payload);
+    else await navigator.clipboard.writeText(`${payload.text}\n${payload.url}`);
+    setShared(true);
+  }
+
   return (
     <main>
       <nav className="nav"><a className="brand" href="#top"><span>H</span> HakBul</a><a className="nav-link" href="#nasil">Nasıl çalışır?</a><a className="nav-link" href="#guven">Güven ilkesi</a></nav>
@@ -50,7 +58,7 @@ export default function Home() {
           <p className="eyebrow">RESMÎ KAYNAĞA GİDEN EN KISA YOL</p>
           <h1>“Bana uygun ne var?” sorusunu <em>resmî kaynağa</em> bağla.</h1>
           <p className="lede">HakBul; öğrencilerden çiftçilere, iş arayanlardan girişimcilere kadar herkesin hangi kamu desteklerini araştırabileceğini sade Türkçeyle gösterir.</p>
-          <div className="trust-row"><span>✓ Ücretsiz</span><span>✓ Kayıt yok</span><span>✓ Başvuru kararı vermez</span></div>
+          <div className="trust-row"><span>✓ Ücretsiz</span><span>✓ Kayıt yok</span><span>✓ Başvuru kararı vermez</span><button className="share" onClick={share}>{shared ? "Bağlantı hazır ✓" : "Paylaş ↗"}</button></div>
         </div>
         <aside className="hero-note"><p>“Bir şeylere başvurmam gerekiyor ama nereden başlayacağımı bilmiyorum.”</p><strong>İşte HakBul bunun için var.</strong><i>01 / resmî kaynağa yönlendirme</i></aside>
       </section>
