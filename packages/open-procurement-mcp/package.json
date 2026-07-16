@@ -5,6 +5,6 @@
   "type": "module",
   "bin": "src/index.mjs",
   "license": "Apache-2.0",
-  "repository": { "type": "git", "url": "https://github.com/SajadAbdolvandiii/public-interest-mcp.git", "directory": "packages/open-procurement-mcp" },
+  "repository": { "type": "git", "url": "https://github.com/realdeal88/public-interest-mcp.git", "directory": "packages/open-procurement-mcp" },
   "engines": { "node": ">=20" }
 }
