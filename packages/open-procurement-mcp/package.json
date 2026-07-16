@@ -1,0 +1,10 @@
+{
+  "name": "@public-interest-mcp/open-procurement-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for analyzing public Open Contracting release packages.",
+  "type": "module",
+  "bin": "src/index.mjs",
+  "license": "Apache-2.0",
+  "repository": { "type": "git", "url": "https://github.com/SajadAbdolvandiii/public-interest-mcp.git", "directory": "packages/open-procurement-mcp" },
+  "engines": { "node": ">=20" }
+}

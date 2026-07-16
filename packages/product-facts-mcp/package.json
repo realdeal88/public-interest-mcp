@@ -1,0 +1,10 @@
+{
+  "name": "@public-interest-mcp/product-facts-mcp",
+  "version": "0.1.0",
+  "description": "No-key MCP server for global food product facts and allergens.",
+  "type": "module",
+  "bin": "src/index.mjs",
+  "license": "Apache-2.0",
+  "repository": { "type": "git", "url": "https://github.com/SajadAbdolvandiii/public-interest-mcp.git", "directory": "packages/product-facts-mcp" },
+  "engines": { "node": ">=20" }
+}

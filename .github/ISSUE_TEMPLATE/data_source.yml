@@ -1,0 +1,14 @@
+name: Data source request
+description: Propose a public, globally reusable source
+labels: [data-source]
+body:
+  - type: input
+    attributes:
+      label: Official source URL
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: License, access, and public benefit
+    validations:
+      required: true

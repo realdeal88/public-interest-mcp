@@ -1,0 +1,14 @@
+{
+  "name": "public-interest-mcp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Open, no-key MCP servers for civic data, procurement, and disaster intelligence.",
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "test": "node --test packages/*/test/*.test.mjs",
+    "lint": "node scripts/check-project.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "license": "Apache-2.0"
+}
